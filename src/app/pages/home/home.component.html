@@ -1,0 +1,38 @@
+<h1>Asistente de búsqueda</h1>
+<div class="search-container">
+  <app-search-bar (search)="handleSearch($event)"></app-search-bar>
+  <i class="fas fa-search search-icon"></i> <!-- Ícono de lupa -->
+</div>
+<div class="estates-container">
+  <div *ngFor="let estate of filteredEstates" class="estate-item">
+    <div *ngIf="estate.id !== undefined" class="estate-card">
+      <div class="image-container">
+        <img *ngIf="estate.photos.length > 0" [src]="estate.photos[0]" alt="Foto de {{ estate.title }}" class="property-image" />
+      </div>
+      <h2>{{ estate.title }}</h2>
+      <p><strong>Descripción:</strong> {{ estate.description }}</p>
+      <p><strong>Precio por noche:</strong> {{ estate.pricePerNight | currency }}</p>
+      <div class="info-icon" (click)="openModal(estate)">
+        <i class="fas fa-info"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <h3>¿Listo para AirCNC?</h3>
+  <p>
+    ¡Publica tu espacio con nosotros y conecta con viajeros de todo el mundo!
+    <br> Es fácil y rápido. Empieza a ganar dinero hoy mismo.
+  </p>
+  <a href="" class="cta-btn">Más información</a>
+</div>
+
+<div class="about-msg">
+  <h2>Acerca de AirCNC</h2>
+  <p>En AirCNC, somos una plataforma emergente dedicada al alquiler ocasional de inmuebles, conectando propietarios de propiedades únicas con viajeros en busca de experiencias memorables. Ofrecemos una variedad de alojamientos, desde acogedoras cabañas hasta lujosos apartamentos, todos seleccionados para garantizar calidad y confort.
+
+    Nuestra misión es facilitar la búsqueda y reserva de alojamientos, promoviendo la inmersión cultural y el turismo responsable. Creemos en la confianza, la transparencia y un servicio al cliente excepcional.
+    
+    Ya sea para unas vacaciones en familia o una escapada romántica, en AirCNC te ayudamos a encontrar el lugar perfecto para tu próxima aventura.</p>
+</div>

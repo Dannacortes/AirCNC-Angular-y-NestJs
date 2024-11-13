@@ -1,0 +1,37 @@
+
+
+/* Estilo para el ícono */
+h2 i {
+  margin-left: 10px; /* Espacio entre el texto y el ícono */
+  color: #007BFF; /* Color del ícono */
+  font-size: 1.2em; /* Tamaño del ícono */
+}
+
+/* Estilo para la barra de búsqueda */
+.search-bar {
+  display: flex; /* Usar flexbox para alinear elementos */
+  align-items: center; /* Centrar elementos verticalmente */
+  border: 1px solid #ccc; /* Borde de la barra */
+  border-radius: 25px; /* Bordes redondeados */
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: border-color 0.3s ease; /* Transición suave para el borde */
+}
+
+/* Estilo para el campo de texto */
+input[type="text"] {
+  border: solid;
+  color: #007BFF; /* Sin borde en el input */
+  outline: none; /* Sin contorno */
+  padding: 10px;
+  font-size: 16px;
+  width: 1000px; /* Ancho del input */
+  border-radius: 30px; /* Bordes redondeados */
+}
+
+/* Estilo para el placeholder */
+input[type="text"]::placeholder {
+  color: #999; /* Color del placeholder */
+}
+
+

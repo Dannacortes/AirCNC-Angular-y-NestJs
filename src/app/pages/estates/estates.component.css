@@ -1,0 +1,213 @@
+/* Estilo general para el contenedor del componente */
+h1 {
+  color: #007bff; /* Color azul */
+  text-align: center; /* Centrar texto */
+}
+
+h2 {
+  text-align: center;
+  color: #666;
+}
+
+.add-property-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Azul */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-property-btn:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilos para la lista de propiedades */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+li h3 {
+  margin: 0 0 10px;
+}
+
+li p {
+  margin: 5px 0;
+}
+
+/* Estilos para los botones Editar y Eliminar */
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.edit-btn {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049; /* Verde más oscuro */
+}
+
+.delete-btn {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e53935; /* Rojo más oscuro */
+}
+
+/* Estilos para el mensaje de no hay propiedades disponibles */
+.no-properties {
+  text-align: center;
+  color: #999;
+}
+
+.estate-info {
+  display: flex; /* Usar flexbox para alinear propiedades e imágenes */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: flex-start; /* Alinear al inicio */
+  margin-bottom: 10px; /* Espacio entre cada propiedad */
+}
+
+.photo-gallery {
+  display: flex; /* Usar flexbox para alinear elementos en una fila */
+  flex-wrap: wrap; /* Permitir que las imágenes se ajusten en varias filas */
+  margin-left: 10px; /* Espacio a la izquierda para separar del texto */
+}
+
+.photo-container {
+  position: relative; /* Necesario para el posicionamiento absoluto del ícono */
+  display: inline-block; /* Permitir que el contenedor se ajuste al tamaño de la imagen */
+}
+
+.photo-gallery div {
+  margin: 10px; /* Espacio entre imágenes */
+  text-align: center; /* Centrar contenido dentro del div */
+}
+
+.estate-photo {
+  max-width: 200px; /* Ajustar el tamaño de las imágenes */
+  height: 200px; /* Permitir que la altura se ajuste automáticamente */
+  object-fit: cover; /* Asegura que las imágenes se recorten adecuadamente */
+  border-radius: 10%;
+}
+
+/* Estilos para el contenedor sin usuario */
+.no-user-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1; /* Fondo claro */
+  border: 1px solid #ccc; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 20px; /* Margen alrededor del contenedor */
+}
+
+.no-user-message {
+  font-size: 20px;
+  color: #333; /* Color del texto */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo para los botones de registro y inicio de sesión */
+.register-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Azul */
+  color: white; /* Texto blanco */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Sin subrayado */
+  font-size: 16px; /* Tamaño del texto */
+  transition: background 0.3s; /* Transición suave para el hover */
+  margin: 5px; /* Espacio entre botones */
+}
+
+.register-btn:hover {
+  background-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Azul */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px; /* Espacio entre botones */
+}
+
+.upload-btn:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+.delete-image-btn {
+  background-color: #f44336; /* Rojo */
+  color: white;
+  padding: 5px 8px; /* Reduce el padding para hacerlo más pequeño */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+  cursor: pointer;
+  margin-top: 1px; /* Espaciado reducido arriba para acercarlo a la imagen */
+  transition: background-color 0.3s; /* Transición suave para el hover */
+  display: block; /* Asegura que ocupe toda la línea */
+  width: auto; /* Cambia a auto para que ajuste al contenido */
+}
+
+.delete-image-btn:hover {
+  background-color: #e53935; /* Rojo más oscuro en hover */
+}
+
+.custom-modal {
+  max-width: 50%; /* Ajusta el ancho del modal según lo necesites */
+}
+
+.delete-icon {
+  color: red; /* Color rojo para el ícono */
+  font-size: 24px; /* Tamaño del ícono */
+  text-decoration: none; /* Sin subrayado */
+  margin: 10px; /* Espaciado alrededor del ícono */
+  position: absolute; /* Posiciona el ícono absolutamente */
+  top: 10px; /* Ajusta la distancia desde la parte superior de la imagen */
+  right: 10px; /* Ajusta la distancia desde la derecha de la imagen */
+}
+
+.delete-icon:hover {
+  color: darkred; /* Color más oscuro al pasar el mouse */
+}
+
+.add-property-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Azul */
+  color: white;
+  font-size: 16px;
+  cursor: pointer; /* Asegúrate de que sea pointer */
+  text-align: center;
+}

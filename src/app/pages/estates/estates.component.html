@@ -1,0 +1,53 @@
+
+
+<div class="estate" *ngIf="isUserActive; else noUserTemplate">
+  <h1>Asistente de configuracion </h1>
+
+  <label class="add-property-btn" (click)="addEstate()">¡Agregar Propiedad!</label>
+
+<div *ngIf="estates.length > 0">
+  <ul>
+    <li *ngFor="let estate of estates">
+      <div class="estate-info">
+        <div>
+          <h3>{{ estate.title }}</h3>
+          <p>{{ estate.description }}</p>
+          <p>Dirección: {{ estate.address }}</p>
+          <p>Precio por Noche: ${{ estate.pricePerNight }}</p>
+          <p>Número de Habitaciones: {{ estate.bedrooms }}</p>
+          <p>Número de Baños: {{ estate.bathrooms }}</p>
+          <p>Capacidad Máxima: {{ estate.maxCapacity }}</p>
+
+
+          <button class="btn edit-btn" (click)="editEstate(estate)">Editar</button>
+          <button class="btn delete-btn" (click)="deleteEstate(estate.id)">Eliminar</button>
+          <input type="file" #fileInput (change)="onUpload($event, estate)" style="display: none;" />
+          <button class="btn upload-btn" (click)="fileInput.click();">Subir Imagen</button>
+        </div>
+        <div *ngIf="estate.photos.length > 0" class="photo-gallery">
+          <div *ngFor="let photo of estate.photos; let i = index" class="photo-container">
+            <img [src]="photo" alt="{{ estate.title }}" class="estate-photo">
+            <a (click)="deleteImage(photo, estate, i)" class="delete-icon" aria-label="Eliminar imagen">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+  </ul>
+</div>
+</div>
+
+<ng-template #noUserTemplate>
+  <div class="no-user-container">
+    <p class="no-user-message">No hay un usuario activo.</p>
+    <p>¡Estás a un paso de comenzar tu aventura en el mundo de las propiedades! Crea tu perfil y empieza a compartir
+      tus espacios únicos.</p>
+
+    <div>
+      <a [routerLink]="['/sign-up']" class="register-btn">¡Crea tu perfil aquí!</a>
+      <a [routerLink]="['/login']" class="register-btn">¡Inicia sesión!</a>
+
+    </div>

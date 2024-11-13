@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html, body {
+    height: 100%; /* Asegura que el body tenga el 100% de la altura */
+    margin: 0; /* Elimina márgenes */
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column; /* Coloca el contenido y el footer en columnas */
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+  }
+  
+  .content {
+    flex: 1; /* Permite que el contenido crezca y ocupe el espacio disponible */
+    padding: 20px; /* Espaciado alrededor del contenido */
+    margin: 150px;
+  }
+
+.hidebtn{
+    display: none;
+}

@@ -1,0 +1,31 @@
+/* ----------footer-------------*/
+.footer {
+    position: fixed; /* Mantener el footer fijo en la parte inferior */
+    bottom: 0; /* Colocarlo en la parte inferior */
+    left: 0; /* Alinear a la izquierda */
+    right: 0; /* Alinear a la derecha */
+    margin: 0; /* Eliminar margen para un ajuste completo */
+    text-align: center;
+    background-color: #f4f4f4; /* Fondo del footer */
+    padding: 10px 0; /* Espaciado interno para el footer */
+}
+
+.footer a {
+    text-decoration: none;
+    color: #999;
+    font-size: 20px; /* Ajusta el tamaño de la fuente según sea necesario */
+    margin: 0 10px;
+}
+
+.footer hr {
+    background: #999;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    margin: 10px 0; /* Ajusta el margen si es necesario */
+}
+
+.footer p {
+    padding-bottom: 15px; /* Espaciado inferior */
+    font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+}
